@@ -1,0 +1,132 @@
+<Group >
+    <Image x="188" y="-190" src="yh1.png" centerX="74.5" centerY="85">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="100000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="2000"/>
+            <Position x="-200" y="#screen_height+80" time="8000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="627" y="-190" src="yh2.png" pivotX="73" pivotY="73">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="120000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="0"/>
+            <Position x="300" y="#screen_height+80" time="12000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="321" y="-190" src="yh3.png" pivotX="57" pivotY="57">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="120000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="0"/>
+            <Position x="-400" y="#screen_height+80" time="11000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="400" y="-190" src="yh4.png" pivotX="57" pivotY="57">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="120000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="0"/>
+            <Position x="-480" y="#screen_height+80" time="8000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="674" y="-190" src="yh1.png" pivotX="74.5" pivotY="85">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="120000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="5000"/>
+            <Position x="-300" y="#screen_height+80" time="15000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="502" y="-190" src="yh2.png" pivotX="73" pivotY="73">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="300000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="6000"/>
+            <Position x="-300" y="#screen_height+80" time="12000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="889" y="-190" src="yh3.png" pivotX="57" pivotY="57">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="120000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="0"/>
+            <Position x="-300" y="#screen_height+80" time="6000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="683" y="-190" src="yh1.png" pivotX="74.5" pivotY="85">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="35000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="2600"/>
+            <Position x="-400" y="#screen_height+80" time="9500"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="456" y="-190" src="yh2.png" pivotX="73" pivotY="73">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="28000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="3200"/>
+            <Position x="-300" y="#screen_height+80" time="13000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="999" y="-190" src="yh3.png" pivotX="57" pivotY="57">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="12000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="0"/>
+            <Position x="-300" y="#screen_height+80" time="8000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="906" y="-190" src="yh1.png" pivotX="74.5" pivotY="85">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="35000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="6000"/>
+            <Position x="0" y="#screen_height+80" time="16000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="814" y="-190" src="yh2.png" pivotX="73" pivotY="73">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="35000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="8000"/>
+            <Position x="-200" y="#screen_height+80" time="22000"/>
+        </PositionAnimation>
+    </Image>
+    <Image x="600" y="-190" src="yh4.png" pivotX="73" pivotY="73">
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="35000"/>
+        </RotationAnimation>
+        <PositionAnimation>
+            <Position x="0" y="0" time="8000"/>
+            <Position x="-200" y="#screen_height+80" time="16000"/>
+        </PositionAnimation>
+    </Image>
+</Group>

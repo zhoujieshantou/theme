@@ -1,0 +1,48 @@
+<!--时间 居中对齐-->
+<Group name="time_group" y="320">
+	<Time src="time/t.png" y="0" x="540" align="center" />
+	<!--日期-->
+	<Image x="430" y="110" src="time/date.png" srcid="(#month+1)/10" align="center" />
+	<Image x="430+22*1" y="110" src="time/date.png" srcid="(#month+1)%10" align="center"/>
+	<!-- 点点点 -->
+	<Image x="430+22*2" y="110" src="time/date_dot.png" align="center" />
+	<!-- 日 -->
+	<Image x="430+22*3" y="110" src="time/date.png" srcid="#date/10" align="center" />
+	<Image x="430+22*4" y="110" src="time/date.png" srcid="#date%10" align="center" />
+	<!-- 周 -->
+	<Image x="540" y="110" src="time/week.png" srcid="#day_of_week-1"/>
+</Group>
+
+<!--时间-->
+<Group name="time_group" y="#sh-660" x="-340">
+	<Image x="540-55" y="0" src="time/t.png" srcid="int((#hour24)/10)" align="center"/>
+	<Image x="540+55" y="0" src="time/t.png" srcid="int(#hour24%10)" align="center"/>
+	<Image x="540-55" y="190" src="time/t.png" srcid="int(#minute/10)" align="center"/>
+	<Image x="540+55" y="190" src="time/t.png" srcid="int(#minute%10)" align="center"/>
+	<!--日期-->
+	<Image x="430" y="400" src="time/date.png" srcid="(#month+1)/10" align="center" />
+	<Image x="430+22*1" y="400" src="time/date.png" srcid="(#month+1)%10" align="center"/>
+	<!-- 点点点 -->
+	<Image x="430+22*2" y="400" src="time/date_dot.png" align="center" />
+	<!-- 日 -->
+	<Image x="430+22*3" y="400" src="time/date.png" srcid="#date/10" align="center" />
+	<Image x="430+22*4" y="400" src="time/date.png" srcid="#date%10" align="center" />
+	<!-- 周 -->
+	<Image x="540" y="390" src="time/week.png" srcid="#day_of_week-1"/>
+</Group>
+
+<!--时间-->
+<Group name="time_group" y="220">
+	<Time src="time/t.png" y="0" x="540" align="center" space="40"/>
+	<!--日期-->
+	<Image x="420" y="110" src="time/date.png" srcid="(#month+1)/10" align="center" />
+	<Image x="420+24*1" y="110" src="time/date.png" srcid="(#month+1)%10" align="center"/>
+	<!-- 点点点 -->
+	<Image x="420+24*2" y="110" src="time/date_m.png" align="center" />
+	<!-- 日 -->
+	<Image x="420+24*3" y="110" src="time/date.png" srcid="#date/10" align="center" />
+	<Image x="420+24*4" y="110" src="time/date.png" srcid="#date%10" align="center" />
+	<Image x="420+24*5" y="110" src="time/date_d.png" align="center" />
+	<!-- 周 -->
+	<Image x="578" y="110" src="time/week.png" srcid="#day_of_week-1"/>
+</Group>

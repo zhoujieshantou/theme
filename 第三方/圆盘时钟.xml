@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lockscreen version="1" frameRate="40"  displayDesktop="false" screenWidth="1080" id="defaultcolor" >
+  <!-- 
+本代码由鑫霖设计原创编写，禁止盗用，否则不论在哪个平台上架，都会追究责任，如果需要学习交流，欢迎加入45639978主题制作交流群，相互探讨，共同进步。
+-->
+  <ExternalCommands>
+    <Trigger action="resume">
+      <VariableCommand name="gogogo" expression="1" />
+      <VariableCommand name="cc_vis" expression="0" />
+      <VariableCommand name="set_wallpaer" expression="0" />
+      <VariableCommand name="sysset" expression="0" />
+      <VariableCommand name="time_s" expression="0" />
+      <VariableCommand name="time_flag" expression="0" />
+      <VariableCommand name="setting" expression="0" />
+      <VariableCommand name="cv" expression="0" />
+      <VariableCommand name="jianrong" expression="ifelse(lt(#screen_height,1920),120,0)" const="true" />
+      <VariableCommand name="wallpaper_setting" expression="0" />
+      <Command target="clock_ease.animation" value="play" />
+    </Trigger>
+  </ExternalCommands>
+  <VariableBinders>
+    <ContentProviderBinder name="weather1" columns="_id,city_name,city_name_en,city_name_tw" countName="hasWeather" uri="content://com.oppo.weather.provider.data/attent_city" notifyUri="content://com.oppo.weather.provider.data/attent_city" where="current=1" >
+      <Variable name="cityid" column="_id" type="int"/>
+      <Variable name="cityname" column="city_name" type="string"/>
+      <Variable name="cityname_en" column="city_name_en" type="string"/>
+      <Variable name="cityname_tw" column="city_name_tw" type="string"/>
+      <Variable name="timeZone" column="time_zone" type="int"/>
+    </ContentProviderBinder>
+    <ContentProviderBinder name="weather2" columns="weather_id,current_weather,current_temp,current_wind_direct,current_wind_power,day_temp,night_temp,day_weather_id,night_weather_id" countName="hasWeather" uri="content://com.oppo.weather.provider.data/weather_info" 
+            notifyUri="content://com.oppo.weather.provider.data/weather_info" whereExp="'city_id='+#cityid+' and weather_index=1'" dependency="weather1">
+      <Variable name="weather_type" column="weather_id" type="int"/>
+      <Variable name="cur_weather" column="current_weather" type="string"/>
+      <Variable name="cur_weather_temp" column="current_temp" type="int"/>
+      <Variable name="day_temp" column="day_temp" type="int"/>
+      <Variable name="night_temp" column="night_temp" type="int"/>
+      <Variable name="day_weather_type" column="day_weather_id" type="int"/>
+      <Variable name="night_weather_type" column="night_weather_id" type="int"/>
+    </ContentProviderBinder>
+  </VariableBinders>
+  <VarArray type="number">
+    <Vars>
+      <Var name="weather_type_number" index="#weather_type"/>
+    </Vars>
+    <Items>
+      <Item value="0"/>
+      <Item value="1"/>
+      <Item value="2"/>
+      <Item value="2"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="4"/>
+      <Item value="4"/>
+      <Item value="4"/>
+      <Item value="4"/>
+      <Item value="4"/>
+      <Item value="5"/>
+      <Item value="3"/>
+      <Item value="6"/>
+      <Item value="6"/>
+      <Item value="6"/>
+      <Item value="6"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="3"/>
+      <Item value="4"/>
+      <Item value="4"/>
+      <Item value="4"/>
+    </Items>
+  </VarArray>
+  <Var name="set_wallpaer" expression="0" const="true" />
+  <Var name="cc_y" expression="490" />
+  <Var name="cc_vis" expression="0" const="true" />
+  <Var name="gogogo" expression="1" const="true" />
+  <Var name="sysset" expression="0" const="true"/>
+  <Var name="move_y" expression="-min(#unlocker.move_y,0)" />
+  <Var name="jianrong" expression="ifelse(lt(#screen_height,1920),120,0)" const="true" />
+  <Var name="appset" expression="0" const="true" />
+  <Var name="flag_app" expression="0" const="true" />
+  <Var name="app_ease_time" expression="min((#time-#appset)*3,1000)/1000" />
+  <Var name="app_ease" expression="-(#app_ease_time-1)*(#app_ease_time-1)*(#app_ease_time-1)" />
+  <Var name="app_open" expression="ifelse(#flag_app,-#app_ease+1,#app_ease)" />
+  <Var name="second_angle_raw" expression="#second*6"/>
+  <Var name="clock" expression="-(#clock_ease-1)*(#clock_ease-1)*(#clock_ease-1)*(#clock_ease-1)+1" />
+  <Var name="clock_ease">
+    <VariableAnimation>
+      <AniFrame value="0" time="0" />
+      <AniFrame value="1" time="1000" />
+      <AniFrame value="1" time="30000000000000" />
+    </VariableAnimation>
+  </Var>
+  
+  <Wallpaper src="bg.jpg" x="0" y="0" />
+  <Group category="Charging" frameRate="60" visibility="eq(#battery_state,1)">
+    <Image x="540" y="1920" align="center" alignV="center" src="flight.png">
+      <SizeAnimation>
+        <Size w="400" h="400" time="0" />
+        <Size w="500" h="500" time="1200" />
+      </SizeAnimation>
+      <AlphaAnimation>
+        <Alpha a="90" time="0" />
+        <Alpha a="0" time="1200" />
+      </AlphaAnimation>
+    </Image>
+    <Image x="540" y="1920" align="center" alignV="center" src="flight2.png">
+      <SizeAnimation>
+        <Size w="300" h="300" time="0" />
+        <Size w="400" h="400" time="1200" />
+      </SizeAnimation>
+      <AlphaAnimation>
+        <Alpha a="170" time="0" />
+        <Alpha a="90" time="1200" />
+      </AlphaAnimation>
+    </Image>
+    <Image x="540" y="1920" align="center" alignV="center" src="flight3.png">
+      <SizeAnimation>
+        <Size w="0" h="0" time="0" />
+        <Size w="300" h="300" time="1200" />
+      </SizeAnimation>
+      <AlphaAnimation>
+        <Alpha a="255" time="0" />
+        <Alpha a="170" time="1200" />
+      </AlphaAnimation>
+    </Image>
+    <Text x="540" y="1835" format="充电中%d%%" paras="#battery_level" size="36" color="#ffffff" align="center" />
+  </Group>
+  <Group alpha="255*#clock-#move_y/1.6" y="-#move_y/2">
+   <Image x="540" y="669" align="center" alignV="center" centerX="410" centerY="410" src="star.png" scale="0.382+0.618*#clock">
+    <RotationAnimation time="0" angle="0">
+      <Rotation time="6000" angle="360" />
+    </RotationAnimation>
+   </Image>
+    <Image x="540" y="669" src="clockbg.png" align="center" alignV="center" centerX="410" centerY="410" scale="0.382+0.618*#clock"/>
+    <Image x="540" y="669" src="clockbg2.png" align="center" alignV="center" centerX="410" centerY="410" scale="1.618-0.618*#clock"/>
+    <Image src="clock/i2.png" x="540" y="669" align="center" alignV="center" centerX="376" centerY="376" angle="#clock*((#minute+#second*1/60)*360/60)"/>
+    <Image src="clock/i3.png" x="540" y="669" align="center" alignV="center" centerX="376" centerY="376" angle="#clock*（90+(#hour12+#minute*1/60)*360/12）"/>
+    <Image src="clock/i4.png" x="540" y="669" align="center" alignV="center" centerX="376" centerY="376" angle="#clock*（#second_angle_raw)"/>
+  </Group>
+  
+  <Group alpha="255*#clock-#move_y/1.6" y="#clock-1-#move_y/2" visibility="not(#app)">
+    <Time x="540" y="1320" src="time/t.png" align="center"/>
+    <DateTime x="540" y="1465" color="#FFFFFFFF" size="36" format="M/d NNNN E" align="center"/>
+    <Text x="540" y="1507" size="36" color="#FFFFFFFF" textExp="@cityname + ' ' + @cur_weather + ' ' + #cur_weather_temp + '℃'" align="center"/>
+  </Group>
+ 
+  <Group alpha="255*#app_open-abs((#move_y)/2)" y="-#move_y/2.0" visibility="#app">
+    <MusicControl name="music_control" enableLyric="true"  autoShow="true" enableProgress="true" updateLyricInterval="1000" defAlbumCover="default_album_cover.png">
+      
+      <Text  textExp="@music_control.title" x="540" w="700"  align="center"  y="1322" alpha="255" color="#ffffff" size="60"   marqueeSpeed="60" visibility="#music_control.music_state" />
+      <Text  textExp="@music_control.artist" x="540" w="700"  align="center"  y="1390" alpha="160" color="#ffffff" size="40"   marqueeSpeed="60" visibility="#music_control.music_state" />
+      <Text  text="音乐播放器" x="#screen_width/2" w="700"  align="center"  y="1320" alpha="255" color="#ffffff" size="60"   marqueeSpeed="60" visibility="not(#music_control.music_state)" />
+      <Text  text="歌手" x="540" w="700"  align="center"  y="1390" alpha="160" color="#ffffff" size="40"   marqueeSpeed="60" visibility="not(#music_control.music_state)"/>
+      
+      <Image align="center" alignV="center"  x="540" y="1515" src="play.png" visibility="not(#music_control.music_state)" />
+      <Image align="center" alignV="center"  x="540" y="1515" src="pause.png" visibility="#music_control.music_state" />
+      <Button name="music_play" h="100" w="100" align="center" alignV="center"  x="540" y="1515" ></Button>
+      <Button name="music_pause" h="100" w="100" align="center" alignV="center"  x="540" y="1515" ></Button>
+      <Button name="music_prev" h="100" w="100"  align="center" alignV="center"  x="393" y="1515" >
+               <Normal>
+          <Image align="center" alignV="center"  x="393" y="1515" src="prev.png" alpha="255*#app_open-#move_y/1.6"  />
+        </Normal>
+        <Pressed>
+          <Image align="center" alignV="center"  x="393" y="1515" src="prev.png" alpha="120"  />
+        </Pressed>
+      </Button>
+      <Button name="music_next" h="130" w="130" align="right" alignV="center"  x="687" y="1515" >
+        <Normal>
+          <Image align="center" alignV="center"  x="687" y="1515" src="next.png" alpha="255*#app_open-#move_y/1.6" />
+        </Normal>
+        <Pressed>
+          <Image align="center" alignV="center"  x="687" y="1515" src="next.png" alpha="120"  />
+        </Pressed>
+      </Button>
+    </MusicControl>
+    <Button x="0" y="1760+#move_y/1.6-#jianrong" w="200" h="200">
+      <Triggers>
+        <Trigger action="up">
+          <VariableCommand name="appset" expression="#time" />
+          <VariableCommand name="flag_app" expression="0" />
+          <VariableCommand name="app" expression="0" delay="300" />
+        </Trigger>
+      </Triggers>
+    </Button>
+  </Group>
+  <Group alpha="255-#move_y/1.6">
+    <Button x="880" y="#screen_height-200-#jianrong" w="200" h="200">
+      <Normal>
+        <Image x="959" y="#screen_height-64-#jianrong" src="camera.png" alignV="center" alpha="255-#move_y/1.6" />
+      </Normal>
+      <Pressed>
+        <Image x="959" y="#screen_height-64-#jianrong" src="camera.png" alignV="center" alpha="120-#move_y/1.6" />
+      </Pressed>
+      <Triggers>
+        <Trigger action="up">
+          <IntentCommand action="android.intent.action.MAIN" package="com.oppo.camera" class="com.oppo.camera.Camera" />
+          <ExternCommand command="unlock" />
+        </Trigger>
+      </Triggers>
+    </Button>
+  </Group>
+  <Group alpha="255-#move_y/1.6">
+    <Image x="540" y="#screen_height-64-#jianrong" src="down_tip.png" align="center" alignV="center" alpha="255*min(1,abs(#battery_state-1))">
+      <AlphaAnimation>
+        <Alpha a="0" time="0"/>
+        <Alpha a="200" time="1200"/>
+        <Alpha a="0" time="2400"/>
+        <Alpha a="0" time="4800"/>
+      </AlphaAnimation>
+    </Image>
+    <Image x="540" y="#screen_height-64-#jianrong" src="down_tip2.png" align="center" alignV="center" alpha="255*min(1,abs(#battery_state-1))">
+      <AlphaAnimation>
+        <Alpha a="0" time="0"/>
+        <Alpha a="0" time="2400"/>
+        <Alpha a="200" time="3600"/>
+        <Alpha a="0" time="4800"/>
+      </AlphaAnimation>
+    </Image>
+  </Group>
+  <Group alpha="255-#move_y/1.6">
+    <Image x="25" y="#screen_height-64-#jianrong" alignV="center"  src="botton/appicon.png" srcid="#app"/>
+    <Button x="0" y="#screen_height-200-#jianrong"  w="200" h="200">
+      <Triggers>
+        <Trigger action="up" condition="not(#app)*le(abs(#touch_begin_y-#touch_y),20)">
+          <VariableCommand name="app" expression="1" />
+          <VariableCommand name="appset" expression="#time" />
+          <VariableCommand name="flag_app" expression="1" />
+        </Trigger>
+      </Triggers>
+    </Button>
+  </Group>
+  <Unlocker name="unlocker" bounceInitSpeed="1000" bounceAccelation="1000">
+    <StartPoint x="#touch_begin_x" y="#touch_begin_y" w="1" h="1"/>
+    <EndPoint x="ifelse(lt(#unlocker.move_y,-300),#touch_x,-1)" y="ifelse(lt(#unlocker.move_y,-200),#touch_y,-1)" w="1" h="1"/>
+  </Unlocker>
+  
+  <!-- 
+  <button x="#POWEREDBYXINLAMNETWORK" y="#DONOTSTEAL" align="center" alpha="255">
+    <Triggers>
+        <Trigger action="up">
+          <VariableCommand name="manifest_xml" expression="0" />
+        </Trigger>
+     </Triggers>
+   <Normal>
+        <Image src="seting.png" align="center" alignV="center" x="250" y="250" />
+   </Normal> 
+  </Button>
+-->
+  
+</Lockscreen>

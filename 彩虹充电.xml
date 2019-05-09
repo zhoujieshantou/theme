@@ -1,0 +1,13 @@
+<Group visibility="gt(#battery_state,0)" y="#sh-234">
+    <Image src="hxcd.png" x="#screen_width/2" align="center">
+        <AlphaAnimation>
+            <Alpha a="255" time="0"/>
+            <Alpha a="0" time="1000"/>
+            <Alpha a="255" time="2000"/>
+        </AlphaAnimation>
+    </Image>
+
+    <Text y="180" x="#screen_width/2" align="center" size="42" format="低电量%d%" color="#f0f0f0" paras="#battery_level" category="BatteryLow" alpha="255"/>
+    <Text y="180" x="#screen_width/2" align="center" size="42" color="#f0f0f0" category="Charging" alpha="255" textExp="'正在充电'+#battery_level+'%'"/>
+    <Text y="180" x="#screen_width/2-2" align="center" size="42" color="#f0f0f0" category="BatteryFull" alpha="255" textExp="'已充满'+#battery_level+'%'"/>
+</Group>

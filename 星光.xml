@@ -1,0 +1,206 @@
+	<Group name="xg_group" visibility="not(#xg)">
+		<Image x="60+40*sin(#time/400)" y="#screen_height" src="conf_img/txxg2.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="300"/>
+				<Position x="0" y="-2500" time="22356"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="21356"/>
+				<Alpha a="0" time="22356"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="79+30*sin(#time/350)" y="#screen_height" src="conf_img/txxg1.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="5320"/>
+				<Position x="0" y="-2500" time="14540"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="13540"/>
+				<Alpha a="0" time="14540"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="300+30*sin(#time/350)" y="#screen_height" src="conf_img/txxg3.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="4320"/>
+				<Position x="0" y="-2500" time="14540"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="13540"/>
+				<Alpha a="0" time="14540"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="918+40*sin(#time/300)" y="#screen_height" src="conf_img/txxg2.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="-2500" time="10540"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="8540"/>
+				<Alpha a="0" time="9540"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="759+50*sin(#time/450)" y="#screen_height" src="conf_img/txxg1.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="1800"/>
+				<Position x="0" y="-2500" time="36324"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="35324"/>
+				<Alpha a="0" time="36324"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="600+50*sin(#time/450)" y="#screen_height" src="conf_img/txxg3.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="1900"/>
+				<Position x="0" y="-2500" time="36324"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="35324"/>
+				<Alpha a="0" time="36324"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="290+40*sin(#time/400)" y="#screen_height" src="conf_img/txxg2.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="2400"/>
+				<Position x="0" y="-2500" time="14852"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="13852"/>
+				<Alpha a="0" time="14852"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="404+45*sin(#time/400)" y="#screen_height" src="conf_img/txxg1.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="4066"/>
+				<Position x="0" y="-2500" time="19852"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="18852"/>
+				<Alpha a="0" time="19852"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="581+40*sin(#time/300)" y="#screen_height" src="conf_img/txxg1.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="7952"/>
+				<Position x="0" y="-2500" time="27562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="26562"/>
+				<Alpha a="0" time="27562"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="808+45*sin(#time/400)" y="#screen_height" src="conf_img/txxg2.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="9562"/>
+				<Position x="0" y="-2500" time="22562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="21562"/>
+				<Alpha a="0" time="22562"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="650+50*sin(#time/300)" y="#screen_height" src="conf_img/txxg2.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="7952"/>
+				<Position x="0" y="-2500" time="21562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="20562"/>
+				<Alpha a="0" time="21562"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="444+50*sin(#time/300)" y="#screen_height" src="conf_img/txxg3.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="6952"/>
+				<Position x="0" y="-2500" time="21562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="20562"/>
+				<Alpha a="0" time="21562"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="370+40*sin(#time/400)" y="#screen_height" src="conf_img/txxg1.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="5562"/>
+				<Position x="0" y="-2500" time="16562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="15562"/>
+				<Alpha a="0" time="16562"/>
+			</AlphaAnimation>
+		</Image>
+
+		<Image x="970+45*sin(#time/400)" y="#screen_height" src="conf_img/txxg1.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="8562"/>
+				<Position x="0" y="-2500" time="25562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="25462"/>
+				<Alpha a="0" time="25562"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="680+50*sin(#time/300)" y="#screen_height" src="conf_img/txxg2.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="9952"/>
+				<Position x="0" y="-2500" time="24562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="24462"/>
+				<Alpha a="0" time="24562"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="180+50*sin(#time/300)" y="#screen_height" src="conf_img/txxg3.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="9952"/>
+				<Position x="0" y="-2500" time="24562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="24462"/>
+				<Alpha a="0" time="24562"/>
+			</AlphaAnimation>
+		</Image>
+		<Image x="240+40*sin(#time/400)" y="#screen_height" src="conf_img/txxg1.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="6562"/>
+				<Position x="0" y="-2500" time="19562"/>
+			</PositionAnimation>
+			<AlphaAnimation>
+				<Alpha a="255" time="0"/>
+				<Alpha a="255" time="19462"/>
+				<Alpha a="0" time="19562"/>
+			</AlphaAnimation>
+		</Image>
+	</Group>

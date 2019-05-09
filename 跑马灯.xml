@@ -1,0 +1,8 @@
+	<Image src="color.jpg" x="#sw/2" w="3600" h="3600" y="#sh/2" pivotX="1800" pivotY="1800" align="center" alignV="center">
+		<RotationAnimation>
+			<Rotation angle="0" time="0"/>
+			<Rotation angle="360" time="1000"/>
+		</RotationAnimation>
+	</Image>
+
+	<Image src="paomadeng.png" x="0" y="0" w="#sw" h="#sh" />

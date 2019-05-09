@@ -1,0 +1,108 @@
+<Var name="left_menu_show" expression="1" const="true" />
+<Var name="right_menu_show" expression="1" const="true" />
+
+<Group x="#sw" y="400" w="200" h="811" visibility="not(#right_menu_show)">
+    <Image x="0" y="0" src="right_menu.png" />
+    <PositionAnimation>
+        <Position x="0" y="0" time="0" />
+        <Position x="-200" y="0" time="300" />
+        <Position x="-200" y="0" time="99999999"/>
+    </PositionAnimation>
+
+    <Button x="30" y="30" w="140" h="140">
+        <Triggers>
+            <Trigger action="up">
+                <IntentCommand action="android.intent.action.MAIN" package="com.tencent.mm" class="com.tencent.mm.ui.LauncherUI"/>
+                <ExternCommand command="unlock"/>
+            </Trigger>
+        </Triggers>
+    </Button>
+
+    <Button x="30" y="220" w="140" h="140">
+        <Triggers>
+            <Trigger action="up">
+                <IntentCommand action="android.intent.action.MAIN" package="com.tencent.mobileqq" class="com.tencent.mobileqq.activity.SplashActivity"/>
+                <ExternCommand command="unlock"/>
+            </Trigger>
+        </Triggers>
+    </Button>
+
+    <Button x="30" y="415" w="140" h="140">
+        <Triggers>
+            <Trigger action="up">
+                <IntentCommand action="android.intent.action.MAIN" category="android.intent.category.LAUNCHER" package="com.eg.android.AlipayGphone" class="com.eg.android.AlipayGphone.AlipayLogin" />
+                <ExternCommand command="unlock"/>
+            </Trigger>
+        </Triggers>
+    </Button>
+
+    <Button x="30" y="616" w="140" h="140">
+        <Triggers>
+            <Trigger action="up">
+                <IntentCommand action="android.intent.action.MAIN" package="com.tencent.mm" class="com.tencent.mm.plugin.scanner.ui.BaseScanUI" />
+                <ExternCommand command="unlock" />
+            </Trigger>
+        </Triggers>
+    </Button>
+</Group>
+
+<Group x="0" y="380" w="200" h="1066" visibility="not(#left_menu_show)">
+    <PositionAnimation>
+        <Position x="-200" y="0" time="0" />
+        <Position x="0" y="0" time="300" />
+        <Position x="0" y="0" time="99999999"/>
+    </PositionAnimation>
+
+    <Image x="0" y="0" src="left_menu.png" />
+    <Image x="78" y="889" src="kgg.png" visibility="#xg"/>
+    <Image x="78" y="889" src="kgk.png" visibility="not(#xg)"/>
+
+    <Image x="78" y="958" src="kgg.png" visibility="#hb"/>
+    <Image x="78" y="958" src="kgk.png" visibility="not(#hb)"/>
+
+    <Button x="78" y="889" w="91" h="36">
+        <Triggers>
+            <Trigger action="up">
+                <VariableCommand name="xg" expression="not(#xg)" persist="true"/>
+            </Trigger>
+        </Triggers>
+    </Button>
+    <Button x="78" y="958" w="91" h="36">
+        <Triggers>
+            <Trigger action="up">
+                <VariableCommand name="hb" expression="not(#hb)" persist="true"/>
+            </Trigger>
+        </Triggers>
+    </Button>
+    <Button x="10" y="158" w="180" h="280">
+        <Triggers>
+            <Trigger action="down">
+                <VariableCommand name="bg_id" expression="1" />
+            </Trigger>
+        </Triggers>
+    </Button>
+
+    <Button x="10" y="496" w="180" h="280">
+        <Triggers>
+            <Trigger action="down">
+                <VariableCommand name="bg_id" expression="2" />
+            </Trigger>
+        </Triggers>
+    </Button>
+</Group>
+
+<!--向上滑动解锁-->
+<Button x="0" y="0" w="#screen_width" h="#screen_height">
+    <Triggers>
+        <Trigger action="up">
+            <ExternCommand command="unlock" condition="gt(#touch_begin_y-#touch_y,268)"/>
+
+            <VariableCommand name="left_menu_show" expression="0" condition="ge(#touch_x-#touch_begin_x,200)"/>
+            <VariableCommand name="left_menu_show" expression="1" condition="lt(#touch_x-#touch_begin_x,-200)"/>
+        </Trigger>
+
+        <Trigger action="double">
+            <VariableCommand name="right_menu_show" expression="not(#right_menu_show)" />
+        </Trigger>
+    </Triggers>
+</Button>

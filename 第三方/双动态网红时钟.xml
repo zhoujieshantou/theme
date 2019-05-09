@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lockscreen version="1" frameRate="30" screenWidth="1080">
+	<VariableBinders>
+		<ContentProviderBinder columns="_id,city_name,city_name_en,city_name_tw" countName="hasWeather" name="weather1" notifyUri="content://com.oppo.weather.provider.data/attent_city" uri="content://com.oppo.weather.provider.data/attent_city" where="current=1">
+			<Variable column="_id" name="cityid" type="int"/>
+			<Variable column="city_name" name="cityname" type="string"/>
+			<Variable column="city_name_en" name="cityname_en" type="string"/>
+			<Variable column="city_name_tw" name="cityname_tw" type="string"/>
+		</ContentProviderBinder>
+		<ContentProviderBinder columns="weather_id,current_weather,current_temp,current_wind_direct,current_wind_power,day_temp,night_temp,day_weather_id,night_weather_id" countName="hasWeather" dependency="weather1" name="weather2" notifyUri="content://com.oppo.weather.provider.data/weather_info" uri="content://com.oppo.weather.provider.data/weather_info" whereExp="'city_id='+#cityid+' and weather_index=1'">
+			<Variable column="weather_id" name="weather_type" type="int"/>
+			<Variable column="current_weather" name="cur_weather" type="string"/>
+			<Variable column="current_temp" name="cur_weather_temp" type="int"/>
+			<Variable column="day_temp" name="day_temp" type="int"/>
+			<Variable column="night_temp" name="night_temp" type="int"/>
+			<Variable column="day_weather_id" name="day_weather_type" type="int"/>
+			<Variable column="night_weather_id" name="night_weather_type" type="int"/>
+		</ContentProviderBinder>
+	</VariableBinders>
+	<Var expression="ifelse(ge(#hour24,6),ifelse(lt(#hour24,18),1,0),0)" name="isdaytime"/>
+	<Var expression="ifelse(lt(#hour24,6),1,ifelse(ge(#hour24,18),1,0))" name="isnight"/>
+	<Var expression="ifelse(eq(#isdaytime,1),#weather_type,#night_weather_type)" name="cur_weather_type"/>
+	<Var expression="ifelse(
+		eq(#cur_weather_type, 1),ifelse(ge(#hour24,6)*le(#hour24,18),1,101),
+		eq(#cur_weather_type, 2),ifelse(ge(#hour24,6)*le(#hour24,18),2,201),
+		eq(#cur_weather_type, 3),ifelse(ge(#hour24,6)*le(#hour24,18),2,201),
+		eq(#cur_weather_type, 4),25,
+		eq(#cur_weather_type, 5),5,
+		eq(#cur_weather_type, 6),5,
+		eq(#cur_weather_type, 7),25,
+		eq(#cur_weather_type, 8),25,
+		eq(#cur_weather_type, 9),29,
+		eq(#cur_weather_type, 10),29,
+		eq(#cur_weather_type, 11),29,
+		eq(#cur_weather_type, 12),29,
+		eq(#cur_weather_type, 13),29,
+		eq(#cur_weather_type, 14),30,
+		eq(#cur_weather_type, 15),30,
+		eq(#cur_weather_type, 16),32,
+		eq(#cur_weather_type, 17),32,
+		eq(#cur_weather_type, 18),32,
+		eq(#cur_weather_type, 19),19,
+		eq(#cur_weather_type, 20),32,
+		eq(#cur_weather_type, 21),22,
+		eq(#cur_weather_type, 22),22,
+		eq(#cur_weather_type, 23),24,
+		eq(#cur_weather_type, 24),24,
+		eq(#cur_weather_type, 25),25,
+		eq(#cur_weather_type, 26),29,
+		eq(#cur_weather_type, 27),29,
+		eq(#cur_weather_type, 28),29,
+		eq(#cur_weather_type, 29),29,
+		eq(#cur_weather_type, 30),30,
+		eq(#cur_weather_type, 31),32,
+		eq(#cur_weather_type, 32),32,
+		0)" name="w_type"/>
+	<Var expression="#second*6" name="t1"/>
+	<Var expression="#minute*6" name="m_angle" threshold="6"/>
+	<Wallpaper src="bg.jpg"/>
+	<Image align="center" alignV="center" centerX="72" centerY="0" src="bai1_1.png" x="408" y="941">
+		<RotationAnimation>
+			<Rotation angle="0" time="0"/>
+			<Rotation angle="0" time="650"/>
+			<Rotation angle="30" time="950"/>
+			<Rotation angle="30" time="1050"/>
+			<Rotation angle="0" time="1250"/>
+			<Rotation angle="0" time="1350"/>
+		</RotationAnimation>
+	</Image>
+	<Image align="center" alignV="center" centerX="72" centerY="0" src="bai1_1.png" x="516" y="941">
+		<RotationAnimation>
+			<Rotation angle="0" time="0"/>
+			<Rotation angle="0" time="600"/>
+			<Rotation angle="1" time="650"/>
+			<Rotation angle="0" time="700"/>
+			<Rotation angle="0" time="1250"/>
+			<Rotation angle="-1" time="1300"/>
+			<Rotation angle="0" time="1350"/>
+		</RotationAnimation>
+	</Image>
+	<Image align="center" alignV="center" centerX="72" centerY="0" src="bai1_1.png" x="624" y="941">
+		<RotationAnimation>
+			<Rotation angle="0" time="0"/>
+			<Rotation angle="0" time="600"/>
+			<Rotation angle="1" time="650"/>
+			<Rotation angle="0" time="700"/>
+			<Rotation angle="0" time="1250"/>
+			<Rotation angle="-1" time="1300"/>
+			<Rotation angle="0" time="1350"/>
+		</RotationAnimation>
+	</Image>
+	<Image align="center" alignV="center" centerX="72" centerY="0" src="bai1_1.png" x="732" y="941">
+		<RotationAnimation>
+			<Rotation angle="0" time="0"/>
+			<Rotation angle="-30" time="300"/>
+			<Rotation angle="-30" time="400"/>
+			<Rotation angle="0" time="600"/>
+			<Rotation angle="0" time="1300"/>
+			<Rotation angle="0" time="1350"/>
+		</RotationAnimation>
+	</Image>
+	<Group y="0">
+		<Var expression="ifelse(#time_format,#hour24,#hour12,#hour12,12)" name="hour"/>
+		<Image align="left" name="hour_first" src="time.png" srcid="#hour/10" x="398" y="193"/>
+		<Image align="left" name="hour_second" src="time.png" srcid="#hour%10" x="532" y="193"/>
+		<Image align="left" name="minute_first" src="time.png" srcid="#minute/10" x="398" y="444"/>
+		<Image align="left" name="minute_second" src="time.png" srcid="#minute%10" x="532" y="444"/>
+		<Image align="left" src="week.png" srcid="#day_of_week" x="480" y="785"/>
+		<Image src="date.png" srcid="#year/1000" x="415" y="713"/>
+		<Image src="date.png" srcid="#year/100%10" x="444" y="713"/>
+		<Image src="date.png" srcid="#year%100/10" x="444+29" y="713"/>
+		<Image src="date.png" srcid="#year%10" x="444+29+29" y="713"/>
+		<Image src="date_dot_1.png" x="444+29+29+14" y="713"/>
+		<Image src="date.png" srcid="(#month+1)/10" x="444+29+29+29+14" y="713"/>
+		<Image src="date.png" srcid="(#month+1)%10" x="444+29+29+29+29+14" y="713"/>
+		<Image src="date_dot.png" x="444+29+29+29+29+28" y="713"/>
+		<Image src="date.png" srcid="#date/10" x="444+29+29+29+29+29+28" y="713"/>
+		<Image src="date.png" srcid="#date%10" x="444+29+29+29+29+29+29+28" y="713"/>
+	</Group>
+	<Image h="#screen_height" src="bln_colorful1.png" w="1080" x="0" y="0">
+		<AlphaAnimation>
+			<Alpha a="255" time="0"/>
+			<Alpha a="0" time="2000"/>
+			<Alpha a="255" time="4000"/>
+		</AlphaAnimation>
+	</Image>
+	<Image h="#screen_height" src="bln_colorful2.png" w="1080" x="0" y="0">
+		<AlphaAnimation>
+			<Alpha a="0" time="0"/>
+			<Alpha a="100" time="1500"/>
+			<Alpha a="0" time="3000"/>
+		</AlphaAnimation>
+	</Image>
+	<Image h="#screen_height" src="bln_colorful3.png" w="1080" x="0" y="0">
+		<AlphaAnimation>
+			<Alpha a="0" time="0"/>
+			<Alpha a="255" time="5000"/>
+			<Alpha a="0" time="10000"/>
+		</AlphaAnimation>
+	</Image>
+	<Image align="center" alignV="center" angle="#hour12*30+#minute/2" centerX="271" centerY="271" src="sz.png" x="540" y="1243"/>
+	<Image align="center" alignV="center" angle="#m_angle" centerX="271" centerY="271" src="fz.png" x="540" y="1243"/>
+	<Image align="center" alignV="center" angle="#t1" centerX="271" centerY="271" src="mz.png" x="540" y="1243"/>
+	<Image align="center" alignV="center" src="dial.png" x="540" y="1243"/>
+	<Image align="center" src="lock.png" x="540" y="1741+#unlocker.move_y"/>
+	<Unlocker bounceAcceleration="3000" bounceInitSpeed="1500" name="unlocker">
+		<StartPoint h="500" w="500" x="488" y="1741"/>
+		<EndPoint h="500" w="500" x="488" y="1541">
+			<Path h="500" w="500" x="488" y="1741">
+				<Position x="0" y="0"/>
+				<Position x="0" y="-150"/>
+			</Path>
+		</EndPoint>
+	</Unlocker>
+</Lockscreen>

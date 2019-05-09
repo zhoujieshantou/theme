@@ -1,0 +1,8 @@
+	<Group name="lx_group" visibility="not(#lx)">
+		<Image x="-946" y="-949" src="conf_img/lx.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="2160" y="2160" time="2000"/>
+			</PositionAnimation>
+		</Image>
+	</Group>

@@ -1,0 +1,196 @@
+<Group y="-150" name="hb" visibility="not(#hb)">
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="65" time="12500" w="43"/>
+                <Size h="13" time="25000" w="75"/>
+                <Size h="65" time="37500" w="11"/>
+                <Size h="40" time="50000" w="60"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-80" y="900"/>
+            <Position time="10000" x="1187" y="1534"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="10000"/>
+        </RotationAnimation>
+    </Group>
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="65" time="12500" w="13"/>
+                <Size h="13" time="25000" w="75"/>
+                <Size h="75" time="37500" w="21"/>
+                <Size h="10" time="50000" w="70"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-80" y="922"/>
+            <Position time="6500" x="-100" y="1000"/>
+            <Position time="15000" x="1187" y="1034"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="7000"/>
+        </RotationAnimation>
+    </Group>
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="15" time="12500" w="79"/>
+                <Size h="63" time="25000" w="25"/>
+                <Size h="65" time="37500" w="31"/>
+                <Size h="40" time="50000" w="70"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-56" y="1040"/>
+            <Position time="1000" x="-56" y="1040"/>
+            <Position time="10000" x="1187" y="2012"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="8000"/>
+        </RotationAnimation>
+    </Group>
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="65" time="12500" w="43"/>
+                <Size h="33" time="25000" w="75"/>
+                <Size h="65" time="37500" w="31"/>
+                <Size h="40" time="50000" w="60"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-56" y="1040"/>
+            <Position time="35000" x="-100" y="1040"/>
+            <Position time="10000" x="1187" y="1500"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="15000"/>
+        </RotationAnimation>
+    </Group>
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="65" time="12500" w="23"/>
+                <Size h="10" time="25000" w="75"/>
+                <Size h="65" time="37500" w="5"/>
+                <Size h="40" time="50000" w="60"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-164" y="1110"/>
+            <Position time="9000" x="1151" y="1060"/>
+            <Position time="12000" x="1151" y="1060"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="13000"/>
+        </RotationAnimation>
+        <AlphaAnimation>
+            <Alpha a="255" time="0"/>
+            <Alpha a="100" time="5000"/>
+            <Alpha a="255" time="8000"/>
+        </AlphaAnimation>
+    </Group>
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="65" time="12500" w="43"/>
+                <Size h="33" time="25000" w="75"/>
+                <Size h="65" time="37500" w="31"/>
+                <Size h="40" time="50000" w="60"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-164" y="1110"/>
+            <Position time="2500" x="-164" y="1110"/>
+            <Position time="9000" x="1151" y="1660"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="15000"/>
+        </RotationAnimation>
+    </Group>
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="65" time="12500" w="43"/>
+                <Size h="33" time="25000" w="75"/>
+                <Size h="65" time="37500" w="31"/>
+                <Size h="40" time="50000" w="60"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-164" y="1110"/>
+            <Position time="4000" x="-164" y="1110"/>
+            <Position time="12000" x="1151" y="1660"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="12000"/>
+        </RotationAnimation>
+        <AlphaAnimation>
+            <Alpha a="255" time="0"/>
+            <Alpha a="50" time="4000"/>
+            <Alpha a="255" time="10000"/>
+        </AlphaAnimation>
+    </Group>
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="65" time="12500" w="43"/>
+                <Size h="33" time="25000" w="75"/>
+                <Size h="65" time="37500" w="31"/>
+                <Size h="40" time="50000" w="60"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-164" y="1110"/>
+            <Position time="3000" x="-164" y="1110"/>
+            <Position time="12000" x="1151" y="2000"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="12000"/>
+        </RotationAnimation>
+    </Group>
+    <Group>
+        <Image align="center" alignV="center" src="huaban.png">
+            <SizeAnimation>
+                <Size h="65" time="0" w="79"/>
+                <Size h="65" time="12500" w="43"/>
+                <Size h="33" time="25000" w="75"/>
+                <Size h="65" time="37500" w="31"/>
+                <Size h="40" time="50000" w="60"/>
+            </SizeAnimation>
+        </Image>
+        <PositionAnimation>
+            <Position time="0" x="-164" y="1110"/>
+            <Position time="5000" x="-164" y="1110"/>
+            <Position time="12000" x="1151" y="2000"/>
+        </PositionAnimation>
+        <RotationAnimation>
+            <Rotation angle="0" time="0"/>
+            <Rotation angle="360" time="12000"/>
+        </RotationAnimation>
+        <AlphaAnimation>
+            <Alpha a="255" time="0"/>
+            <Alpha a="100" time="4000"/>
+            <Alpha a="255" time="10000"/>
+        </AlphaAnimation>
+    </Group>
+</Group>
