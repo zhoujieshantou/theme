@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lockscreen displayDesktop="true" frameRate="120" screenWidth="1080" showSysWallpaper="false" version="1">
+<Wallpaper  src="mohutu/1920w.jpg"/>
+	<Var name="g" expression="8" const="true"/>
+
+	<ExternalCommands>      
+		<Trigger action="resume">
+			<VariableCommand name="yzhou"  expression="0"/>
+			<VariableCommand name="yzhou1" expression="-600"/>
+			<VariableCommand name="yzhou2" expression="-800"/>
+			<VariableCommand name="yzhou3" expression="-100"/>
+			<VariableCommand name="yzhou4" expression="-400"/>
+			<VariableCommand name="yzhou5" expression="-200"/>
+			<VariableCommand name="vy"  expression="60"/>
+			<VariableCommand name="vy1" expression="60"/>
+			<VariableCommand name="vy2" expression="60"/>
+			<VariableCommand name="vy3" expression="60"/>
+			<VariableCommand name="vy4" expression="60"/>
+			<VariableCommand name="vy5" expression="60"/>
+			<SoundCommand sound="kong.mp3" volume="0" keepCur="false" />
+
+		</Trigger>
+		<Trigger action="pause">
+			<VariableCommand name="kais1" expression="1"/>
+			<VariableCommand name="keyi" expression="0"/>
+			<VariableCommand name="yx" expression="0"/>
+			<VariableCommand name="bofan" expression="0" />
+			<Command target="gan.visibility" value="false"/> 
+			<Command target="hua.visibility" value="false"/> 
+			<Command target="wanju.visibility" value="false"/> 
+			<SoundCommand sound="kong.mp3" volume="0" keepCur="false" />
+		</Trigger>
+	</ExternalCommands>
+
+	<Var name="yinxiao" expression="eq(#kais,0)*#keyi" threshold="1"  >
+		<Trigger>
+			<VariableCommand name="yx" expression="not(#yx)" condition="eq(#keyi,0)"/> 
+		</Trigger>
+	</Var>
+	<Var name="yinxiao1" expression="#yx" threshold="1"  >
+		<Trigger>
+			<SoundCommand sound="yinxiao_2.mp3" volume="1" keepCur="false" />
+			<VariableCommand name="bofan" expression="0" />
+		</Trigger>
+	</Var>
+	<Var name="yinxiao2" expression="#yxxx" threshold="1"  >
+		<Trigger>
+			<VariableCommand name="bofan" expression="1" />
+			<SoundCommand sound="yinxiao_1.mp3" volume="1" loop="true" keepCur="false" />
+		</Trigger>
+	</Var>
+
+	<Var name="kongzhi" expression="#time" threshold="1"  >
+		<Trigger>
+			<VariableCommand name="vy" expression="ifelse(ge(#yzhou,1314)*gt(#vy,-#g/2)*lt(#vy,#g/2),0,#vy+#g)"/> 
+			<VariableCommand name="yzhou" expression="#yzhou+#vy"/> 
+			<VariableCommand name="yzhou" expression="1314" condition="ge(#yzhou,1314)"/> 
+			<VariableCommand name="vy" expression="-#vy*0.3" condition="ge(#yzhou,1314)"/> 
+		</Trigger>
+	</Var>	
+	<Var name="kongzhi1" expression="#time" threshold="1"  >
+		<Trigger>
+			<VariableCommand name="vy1" expression="ifelse(ge(#yzhou1,1331)*gt(#vy1,-#g/2)*lt(#vy1,#g/2),0,#vy1+#g)"/> 
+			<VariableCommand name="yzhou1" expression="#yzhou1+#vy1"/> 
+			<VariableCommand name="yzhou1" expression="1331" condition="ge(#yzhou1,1331)"/> 
+			<VariableCommand name="vy1" expression="-#vy1*0.3" condition="ge(#yzhou1,1331)"/> 
+		</Trigger>
+	</Var>
+	<Var name="kongzhi2" expression="#time" threshold="1"  >
+		<Trigger>
+			<VariableCommand name="vy2" expression="ifelse(ge(#yzhou2,1342)*gt(#vy2,-#g/2)*lt(#vy2,#g/2),0,#vy2+#g)"/> 
+			<VariableCommand name="yzhou2" expression="#yzhou2+#vy2"/> 
+			<VariableCommand name="yzhou2" expression="1342" condition="ge(#yzhou2,1342)"/> 
+			<VariableCommand name="vy2" expression="-#vy2*0.3" condition="ge(#yzhou2,1342)"/> 
+		</Trigger>
+	</Var>
+	<Var name="kongzhi3" expression="#time" threshold="1"  >
+		<Trigger>
+			<VariableCommand name="vy3" expression="ifelse(ge(#yzhou3,1334)*gt(#vy3,-#g/2)*lt(#vy3,#g/2),0,#vy3+#g)"/> 
+			<VariableCommand name="yzhou3" expression="#yzhou3+#vy3"/> 
+			<VariableCommand name="yzhou3" expression="1334" condition="ge(#yzhou3,1334)"/> 
+			<VariableCommand name="vy3" expression="-#vy3*0.3" condition="ge(#yzhou3,1334)"/> 
+		</Trigger>
+	</Var>
+	<Var name="kongzhi4" expression="#time" threshold="1"  >
+		<Trigger>
+			<VariableCommand name="vy4" expression="ifelse(ge(#yzhou4,1138)*gt(#vy4,-#g/2)*lt(#vy4,#g/2),0,#vy4+#g)"/> 
+			<VariableCommand name="yzhou4" expression="#yzhou4+#vy4"/> 
+			<VariableCommand name="yzhou4" expression="1138" condition="ge(#yzhou4,1138)"/> 
+			<VariableCommand name="vy4" expression="-#vy4*0.3" condition="ge(#yzhou4,1138)"/> 
+		</Trigger>
+	</Var>
+	<Var name="kongzhi5" expression="#time" threshold="1"  >
+		<Trigger>
+			<VariableCommand name="vy5" expression="ifelse(ge(#yzhou5,1163)*gt(#vy5,-#g/2)*lt(#vy5,#g/2),0,#vy5+#g)"/> 
+			<VariableCommand name="yzhou5" expression="#yzhou5+#vy5"/> 
+			<VariableCommand name="yzhou5" expression="1163" condition="ge(#yzhou5,1163)"/> 
+			<VariableCommand name="vy5" expression="-#vy5*0.3" condition="ge(#yzhou5,1163)"/> 
+		</Trigger>
+	</Var>
+	
+	<Var name="kongzhi6" expression="#time" threshold="1"  >
+		<Trigger>
+
+			<VariableCommand name="movex" expression="#touch_x-#touch_begin_x" condition="#slider"/>
+			<VariableCommand name="yd" expression="ifelse(ge(#mx+#movex,860),860,le(#mx+#movex,660),660,#mx+#movex)" condition="#slider"/>
+			<VariableCommand name="mx" expression="#yd" condition="not(#slider)"/>
+
+
+				<VariableCommand name="tmd" expression="(600/200)*#yd-1980"  condition="eq(#bianhua,1)"/>
+			<VariableCommand name="dianji" expression="ifelse(ge(#dianji+#dianji2-#dianji1,860),860,le(#dianji+#dianji2-#dianji1,660),660,#dianji+#dianji2-#dianji1)" condition="eq(#bianhua,0)"/>
+		</Trigger>
+	</Var>
+
+	<Image  src="2400.png"/>
+
+
+	<Image x="0" y="0" src="nei.png"/>
+	<Image x="0" y="0" src="kou.png"/>
+	
+	<!-- 娃娃机内部动画 -->
+	<Group y="0">
+		<Image x="461" y="386" align="center" alignV="center" src="yanhua_1.png" >
+			<SizeAnimation>
+				<Size w="0" h="0" time="0"/>
+				<Size w="142" h="142" time="800"/>
+				<Size w="142" h="142" time="1200"/>
+			</SizeAnimation>
+		</Image>
+		<Image x="810" y="421" align="center" alignV="center" src="yanhua_2.png" >
+			<SizeAnimation>
+				<Size w="0" h="0" time="0"/>
+				<Size w="142" h="142" time="800"/>
+				<Size w="142" h="142" time="1200"/>
+			</SizeAnimation>
+		</Image>
+		<Image x="693" y="718" align="center" alignV="center" src="yanhua_3.png" >
+			<SizeAnimation>
+				<Size w="0" h="0" time="0"/>
+				<Size w="142" h="142" time="800"/>
+				<Size w="142" h="142" time="1200"/>
+			</SizeAnimation>
+		</Image>
+		<Image x="660" y="488" align="center" alignV="center" pivotX="410/2" pivotY="57/2" rotation="5*sin(#time/400)" src="zi.png" />
+	</Group>
+	
+	<Image x="157" y="275+0" pivotX="232" pivotY="1" rotation="5*sin(#time/800)" src="renwu_5.png" >
+		<PositionAnimation>
+			<Position x="0" y="-275-420" time="0"/>
+			<Position x="0" y="0" time="1000"/>
+			<Position x="0" y="0" time="999999999"/>
+		</PositionAnimation>
+	</Image>
+
+	<!-- 滑竿 -->
+	<Group x="20" y="0">
+		<Image x="137+#tmd" y="127" src="zhua.png" visibility="#kais1"/>
+		<Image x="137+#tmd" y="127" src="zhua.png" name="gan" visibility="false" >
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="400" time="800"/>
+				<Position x="0" y="0" time="1500"/>
+				<Position x="0" y="0" time="2000"/>
+				<Position x="260-137-#tmd" y="0" time="3000"/>
+				<Position x="0" y="0" time="4000"/>
+				<Position x="0" y="0" time="999999999"/>
+			</PositionAnimation>
+		</Image>
+		<Image x="132+#tmd" y="147"  src="zuoyou.png" visibility="#kais1"/>
+		<Image x="132+#tmd" y="147"  src="zuoyou.png" name="hua" visibility="false" >
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="2000"/>
+				<Position x="260-137-#tmd" y="0" time="3000"/>
+				<Position x="0" y="0" time="4000"/>
+				<Position x="0" y="0" time="999999999"/>
+			</PositionAnimation>
+		</Image>
+		<Image x="-20+137+#tmd11-62" y="1000-15" src="renwu.png" pivotX="267/2" pivotY="417/2" rotation="3*cos(#time/400)" name="wanju" srcid="#suiji" visibility="false">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="0" time="800"/>
+				<Position x="0" y="162-614" time="1500"/>
+				<Position x="0" y="162-614" time="2000"/>
+				<Position x="260-(137+#tmd11)" y="162-614" time="3000"/>
+				<Position x="260-(137+#tmd11)" y="1385-985" time="4000"/>
+				<Position x="260-(137+#tmd11)" y="1385-985-30" time="4100"/>
+				<Position x="260-(137+#tmd11)" y="1385-985" time="4200"/>
+				<Position x="260-(137+#tmd11)" y="1385-985-10" time="4300"/>
+				<Position x="260-(137+#tmd11)" y="1385-985" time="4400"/>
+				<Position x="260-(137+#tmd11)" y="1385-985" time="999999999"/>
+			</PositionAnimation>
+		</Image>
+	</Group>
+	<!-- 人物 -->
+	<Group y="0">
+		<Image alignV="bottom" x="540" y="#yzhou1" pivotX="267/2" pivotY="417/2" rotation="-90+3*cos(#time/400)" src="renwu_5.png" />
+		<Image alignV="bottom" x="280" y="#yzhou3" pivotX="267/2" pivotY="417/2" rotation="-60+3*cos(#time/400)" src="renwu_7.png" />
+		<Image alignV="bottom" x="367" y="#yzhou4" pivotX="267/2" pivotY="417/2" rotation="3*cos(#time/400)" src="renwu_3.png" />
+		<Image alignV="bottom" x="614" y="#yzhou5" pivotX="267/2" pivotY="417/2" rotation="4*sin(#time/500)" src="renwu_7.png" />
+		<Image alignV="bottom" x="75"  y="#yzhou"  pivotX="267/2" pivotY="417/2" rotation="3*cos(#time/600)" src="renwu_4.png" />
+		<Image alignV="bottom" x="719" y="#yzhou3" pivotX="267/2" pivotY="417/2" rotation="4*cos(#time/400)" src="renwu_1.png" />
+		<Image alignV="bottom" x="518" y="#yzhou2" pivotX="267/2" pivotY="417/2" rotation="3*sin(#time/500)" src="renwu_2.png" />
+		<Image alignV="bottom" x="299" y="#yzhou1" pivotX="267/2" pivotY="417/2" rotation="4*sin(#time/600)" src="renwu_6.png" />
+	</Group>
+	
+	<Image x="0" y="0"  src="bian.png"/>
+	<Image x="0" y="0"  src="wawaji/1920.png"/>
+
+
+	<Var name="dianji" expression="660" const="true"/>
+	<Var name="yd" expression="660" const="true"/>
+	<Group y="0">		
+		<Image x="#yd" y="1207" src="bang.png"/>
+		<Button x="#yd" y="1207" w="93" h="195" visibility="eq(#yzhou2,1342)*eq(#vy2,0)*eq(#keyi,0)">
+			<Triggers>
+				<Trigger action="down">
+					<VariableCommand name="bianhua" expression="1" />
+					<VariableCommand name="slider" expression="1" />
+					<VariableCommand name="dj" expression="1"/>
+					<VariableCommand name="yxxx" expression="not(#yxxx)" condition="not(#bofan)"/>
+					<SoundCommand sound="yinxiao_1.mp3" volume="1" loop="true" keepCur="false" />
+				</Trigger>
+			</Triggers>
+		</Button>
+		<Button x="#yd" y="1207" w="93" h="195" visibility="eq(#yzhou2,1342)*eq(#vy2,0)*eq(#keyi,0)">
+			<Triggers>
+				<Trigger action="up">
+					<VariableCommand name="bianhua" expression="0" />
+					<VariableCommand name="slider" expression="0" />
+					<VariableCommand name="dianji2" expression="#touch_x" />
+					<VariableCommand name="dj" expression="0"/>
+					<VariableCommand name="dianji" expression="ifelse(ge(#dianji+#dianji2-#dianji1,860),860,le(#dianji+#dianji2-#dianji1,660),660,#dianji+#dianji2-#dianji1)" />
+					<SoundCommand sound="kong.mp3" volume="0" keepCur="false" condition="eq(#slider,0)"/>
+				</Trigger>
+			</Triggers>
+		</Button>
+
+		<Button x="0" y="0" w="#screen_width" h="#screen_height">
+			<Triggers>
+				<Trigger action="up">
+					<VariableCommand name="bianhua" expression="0" />
+					<VariableCommand name="slider" expression="0" />
+					<VariableCommand name="dj" expression="0"/>
+					<!-- <VariableCommand name="dianji" expression="ifelse(ge(#dianji+#dianji2-#dianji1,860),860,le(#dianji+#dianji2-#dianji1,660),660,#dianji+#dianji2-#dianji1)" /> -->
+				<SoundCommand sound="kong.mp3" volume="0" keepCur="false" condition="eq(#slider,0)"/>
+					
+				</Trigger>
+			</Triggers>
+		</Button>
+
+		<Button x="723" y="1490" w="157" h="110" visibility="eq(#yzhou2,1342)*eq(#vy2,0)*eq(#keyi,0)">
+			<Triggers>
+				<Trigger action="down">
+					<VariableCommand name="yxxx" expression="not(#yxxx)" condition="not(#bofan)"/>
+					<VariableCommand name="kais1" expression="0"   />
+					<VariableCommand name="keyi" expression="1"   />
+					<VariableCommand name="keyi" expression="0"  delay="4000" />
+					<VariableCommand name="suiji" expression="int(rand()*7)+1"   />
+					<VariableCommand name="tmd11" expression="#tmd" />
+					<Command target="gan.visibility" value="false"/> 
+					<Command target="gan.visibility" value="true"/> 
+					<Command target="gan.animation" value="play"/> 
+					<Command target="hua.visibility" value="false"/> 
+					<Command target="hua.visibility" value="true"/>
+					<Command target="hua.animation" value="play"/> 
+					<Command target="wanju.visibility" value="false"/> 
+					<Command target="wanju.visibility" value="true"/> 
+					<Command target="wanju.animation" value="play"/> 
+				</Trigger>
+			</Triggers>
+		</Button>
+	</Group>
+	<Image x="540" y="91+0" align="center" src="boli.png" />
+
+	<Group y="0">
+		<Time x="335" y="1233" align="center" src="time.png"  />
+
+		<!-- 月 -->
+		<Image src="date.png" x="196" y="1322" srcid="(#month+1)/10"/>
+		<Image src="date.png" x="196+25" y="1322" srcid="(#month+1)%10"/>
+		<Image src="date_yue.png"  x="196+25*2" y="1322"/>
+		<!-- 日 -->                      
+		<Image src="date.png" x="196+25*3" y="1322" srcid="#date/10"/>
+		<Image src="date.png" x="196+25*4" y="1322" srcid="#date%10"/>
+		<Image src="date_ri.png"   x="196+25*5" y="1322"/>
+		<!-- 星期 -->
+		<Image x="374" y="1322" src="week.png" srcid="#day_of_week"/>
+
+	</Group>
+	<Group y="-500">
+		<Image align="center" alignV="center" x="120" y="290" pivotX="68/2" pivotY="71/2" src="zhuangshi_3.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="600" time="1000"/>
+				<Position x="0" y="600" time="999999999"/>
+			</PositionAnimation>
+			<RotationAnimation>
+				<Rotation angle="-20" time="0"/>
+				<Rotation angle="20" time="600"/> 
+				<Rotation angle="-20" time="1200"/> 
+			</RotationAnimation>
+		</Image>
+		<Image align="center" alignV="center" x="120" y="290+75" pivotX="68/2" pivotY="71/2" src="zhuangshi_2.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="600" time="1000"/>
+				<Position x="0" y="600" time="999999999"/>
+			</PositionAnimation>
+			<RotationAnimation>
+				<Rotation angle="20" time="0"/>
+				<Rotation angle="-20" time="800"/> 
+				<Rotation angle="20" time="1600"/> 
+			</RotationAnimation>
+		</Image>
+		<Image align="center" alignV="center" x="120" y="290+75+75" pivotX="68/2" pivotY="71/2" src="zhuangshi_1.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="600" time="1000"/>
+				<Position x="0" y="600" time="999999999"/>
+			</PositionAnimation>
+			<RotationAnimation>
+				<Rotation angle="0" time="0"/>
+				<Rotation angle="360" time="2000"/> 
+			</RotationAnimation>
+		</Image>
+
+</Group>
+<Group>
+
+
+
+
+		<Image align="center" alignV="center" x="1030" y="210" pivotX="68/2" pivotY="71/2" src="zhuangshi_6.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="1000" time="1000"/>
+				<Position x="0" y="1000" time="999999999"/>
+			</PositionAnimation>
+			<RotationAnimation>
+				<Rotation angle="0" time="0"/>
+				<Rotation angle="360" time="2000"/> 
+			</RotationAnimation>
+		</Image>
+		<Image align="center" alignV="center" x="1030" y="210+75" pivotX="68/2" pivotY="71/2" src="zhuangshi_4.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="1000" time="1000"/>
+				<Position x="0" y="1000" time="999999999"/>
+			</PositionAnimation>
+			<RotationAnimation>
+				<Rotation angle="0" time="0"/>
+				<Rotation angle="-360" time="2000"/> 
+			</RotationAnimation>
+		</Image>
+		<Image align="center" alignV="center" x="1030" y="210+75+75" pivotX="68/2" pivotY="71/2" src="zhuangshi_5.png">
+			<PositionAnimation>
+				<Position x="0" y="0" time="0"/>
+				<Position x="0" y="1000" time="1000"/>
+				<Position x="0" y="1000" time="999999999"/>
+			</PositionAnimation>
+			<RotationAnimation>
+				<Rotation angle="0" time="0"/>
+				<Rotation angle="360" time="2000"/> 
+			</RotationAnimation>
+		</Image>
+	</Group>
+	<!-- 流星 -->
+	<Group>
+		<Image x="1080-(#time/3.42)%(1500)" y="(#time/3.42)%(1500)" src="liuxing_1.png" />
+		<Image x="1080-(#time/4.12)%(1500)" y="392+(#time/4.12)%(1500)" src="liuxing_2.png" />
+		<Image x="1080-(#time/5.78)%(1500)" y="902+(#time/5.78)%(1500)" src="liuxing_3.png" />
+	</Group>
+
+	<Group y="0">
+		<Image x="796" y="1684" align="center" w="124" h="67" visibility="eq(#battery_state,1)+eq(#battery_state,3)">
+			<SourcesAnimation>
+				<Source  src="dianchi_1.png" time="0"/>
+				<Source  src="dianchi_1.png" time="200"/>
+				<Source  src="dianchi_2.png" time="400"/>
+				<Source  src="dianchi_3.png" time="600"/>
+				<Source  src="dianchi_4.png" time="800"/>
+				<Source  src="dianchi_5.png" time="1000"/>
+				<Source  src="dianchi_6.png" time="1200"/>
+				<Source  src="dianchi_7.png" time="1400"/>
+			</SourcesAnimation>
+		</Image> 
+		<Image x="796" y="1684" align="center" w="124" h="67" src="dianchi.png" srcid="ifelse(lt(#battery_level,10),1,lt(#battery_level,30),2,lt(#battery_level,50),3,lt(#battery_level,70),4,lt(#battery_level,90),5,lt(#battery_level,100),6,7)" visibility="eq(#battery_state,0)+eq(#battery_state,2)"/>
+
+		<Image align="right" alignV="center" x="829" y="1659" src="zzcd.png" visibility="eq(#battery_state,1)+eq(#battery_state,3)"/>
+		<Image align="right" alignV="center" x="702" y="1792" src="wddx.png" visibility="#sms_unread_count"/>
+		<Image align="right" alignV="center" x="963" y="1792" src="wjld.png" visibility="#call_missed_count"/>
+		<!--电量显示-->
+		<Text  alignV="center" x="829" y="1659" color="#427fcd" size="30" format=" %d%%" paras="#battery_level"  category="Charging"/> <!--充电中-->
+		<Text  alignV="center" x="829" y="1659" color="#427fcd" size="30" format=" %d%%" paras="#battery_level"  category="BatteryFull"/><!--充满-->
+
+		<Text  alignV="center" x="702" y="1790" size="30" color="#427fcd" format=" %d" paras="#sms_unread_count"  visibility="#sms_unread_count" />
+		<Text  alignV="center" x="963" y="1790" size="30" color="#427fcd" format=" %d" paras="#call_missed_count"  visibility="#call_missed_count"  />
+
+	</Group>
+
+<!-- 任意解锁 -->
+<Unlocker name="unlocker" >
+	<StartPoint x="#touch_begin_x" y="#touch_begin_y" w="1" h="1" />
+	<EndPoint x="ifelse(gt(#unlocker.move_dist,300),#touch_x,-1)" y="ifelse(gt(#unlocker.move_dist,300),#touch_y,-1)" w="1" h="1" />
+</Unlocker>
+
+</Lockscreen>
